@@ -1,11 +1,14 @@
 FROM alpine:3.8
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
+ENV TZ Asia/Shanghai
+
+COPY etc/ /etc/
+COPY root/ /root/
+
 RUN echo 'https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main' > /etc/apk/repositories \
     && echo 'https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/community' >> /etc/apk/repositories \
-    && apk update && apk --no-cache add bash curl vim tini tzdata
-
-ENV TZ Asia/Shanghai
+    && apk update && apk --no-cache add bash bash-completion curl vim tini tzdata
 
 ENTRYPOINT ["tini", "--"]
 
