@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV TZ Asia/Shanghai
@@ -6,8 +6,8 @@ ENV TZ Asia/Shanghai
 COPY etc/ /etc/
 COPY root/ /root/
 
-RUN echo 'https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main' > /etc/apk/repositories \
-    && echo 'https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/community' >> /etc/apk/repositories \
+RUN echo 'https://mirrors.aliyun.com/alpine/v3.9/main' > /etc/apk/repositories \
+    && echo 'https://mirrors.aliyun.com/alpine/v3.9/community' >> /etc/apk/repositories \
     && apk update && apk --no-cache add bash bash-completion curl vim tini tzdata
 
 ENTRYPOINT ["tini", "--"]
