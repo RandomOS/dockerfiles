@@ -8,6 +8,6 @@ COPY root/ /root/
 
 RUN echo 'https://mirrors.aliyun.com/alpine/v3.9/main' > /etc/apk/repositories \
     && echo 'https://mirrors.aliyun.com/alpine/v3.9/community' >> /etc/apk/repositories \
-    && apk update && apk --no-cache add bash bash-completion curl vim tzdata
+    && apk update && apk add --no-cache bash bash-completion curl vim tzdata
 
 CMD ["/bin/sh"]
