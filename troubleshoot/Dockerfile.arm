@@ -9,7 +9,7 @@ RUN apk update \
         fping \
         gawk grep \
         htop \
-        iftop iperf iproute2 iotop \
+        iftop iperf iproute2 \
         mtr \
         netcat-openbsd ngrep nload nmap nmap-ncat nmap-nping \
         openssl \
