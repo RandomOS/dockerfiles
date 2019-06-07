@@ -14,7 +14,6 @@ RUN apk update \
         netcat-openbsd ngrep nload nmap nmap-ncat nmap-nping \
         openssl \
         sed socat strace \
-        tcpdump the_silver_searcher \
-        wrk
+        tcpdump the_silver_searcher
 
 CMD ["/bin/bash"]
