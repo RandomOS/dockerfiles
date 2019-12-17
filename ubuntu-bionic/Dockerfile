@@ -12,6 +12,7 @@ RUN apt-get update \
     && apt-get clean \
     && locale-gen en_US.UTF-8 \
     && echo $TZ > /etc/timezone \
+    && ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata
 
 CMD ["/bin/sh"]
