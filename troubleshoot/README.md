@@ -3,7 +3,6 @@
 #### What is this?
 It is a custom troubleshoot image.
 
-
 #### Usage
 ```bash
 docker run -it --rm \
