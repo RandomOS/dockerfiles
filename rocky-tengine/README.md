@@ -51,7 +51,6 @@ It is a custom tengine image.
     --with-stream_realip_module \
     --with-stream_ssl_preread_module \
     --with-stream_sni \
-    --with-jemalloc=/run/shm/build/jemalloc-5.2.1 \
     --with-openssl=/run/shm/build/openssl-1.1.1d \
     --with-pcre=/run/shm/build/pcre-8.43 \
     --with-zlib=/run/shm/build/zlib-1.2.11 \
