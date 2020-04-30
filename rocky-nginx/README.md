@@ -12,7 +12,7 @@ It is a custom nginx image.
     --with-ld-opt='-Wl,-Bsymbolic-functions -Wl,-z,relro' \
     --prefix=/usr/local \
     --conf-path=/etc/nginx/nginx.conf \
-    --modules-path=/etc/nginx/modules \
+    --modules-path=/usr/lib/nginx/modules \
     --http-log-path=/var/log/nginx/access.log \
     --error-log-path=/var/log/nginx/error.log \
     --lock-path=/var/lock/nginx.lock \
@@ -59,6 +59,6 @@ It is a custom nginx image.
     --add-module=/run/shm/build/nginx-module-sts-0.1.1 \
     --add-module=/run/shm/build/nginx-module-stream-sts-0.1.1 \
     --add-module=/run/shm/build/nchan-1.2.7 \
-    --add-module=/run/shm/build/njs-0.3.9/nginx \
+    --add-module=/run/shm/build/njs-0.4.0/nginx \
     --add-module=/run/shm/build/headers-more-nginx-module-0.33
 ```

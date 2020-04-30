@@ -11,6 +11,7 @@ RUN wget -q -O /usr/sbin/nginx.gz https://geocities.ws/rocky/bin/alpine/amd64/ng
     && mkdir -p /var/lib/nginx/fastcgi \
     && mkdir -p /var/lib/nginx/proxy \
     && mkdir -p /var/lib/nginx/scgi \
-    && mkdir -p /var/lib/nginx/uwsgi
+    && mkdir -p /var/lib/nginx/uwsgi \
+    && mkdir -p /usr/lib/nginx/modules
 
 CMD ["nginx", "-g", "daemon off;"]

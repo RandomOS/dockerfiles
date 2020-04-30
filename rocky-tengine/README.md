@@ -12,7 +12,7 @@ It is a custom tengine image.
     --with-ld-opt='-Wl,-Bsymbolic-functions -Wl,-z,relro' \
     --prefix=/usr/local \
     --conf-path=/etc/nginx/nginx.conf \
-    --modules-path=/etc/nginx/modules \
+    --modules-path=/usr/lib/nginx/modules \
     --http-log-path=/var/log/nginx/access.log \
     --error-log-path=/var/log/nginx/error.log \
     --lock-path=/var/lock/nginx.lock \
