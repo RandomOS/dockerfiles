@@ -74,6 +74,5 @@ It is a custom tengine image.
     --add-module=/run/shm/build/nginx-module-vts-0.1.18 \
     --add-module=/run/shm/build/nginx-module-sts-0.1.1 \
     --add-module=/run/shm/build/nginx-module-stream-sts-0.1.1 \
-    --add-module=/run/shm/build/nchan-1.2.7 \
     --add-module=/run/shm/build/headers-more-nginx-module-0.33
 ```
