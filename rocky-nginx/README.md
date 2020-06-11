@@ -5,7 +5,7 @@ It is a custom nginx image.
 
 #### Compile options
 ```bash
-# nginx 1.18.0
+# nginx 1.19.0
 ./configure \
     --with-cpu-opt=generic \
     --with-cc-opt='-O2 -fstack-protector' \
@@ -58,7 +58,5 @@ It is a custom nginx image.
     --add-module=/run/shm/build/nginx-module-vts-0.1.18 \
     --add-module=/run/shm/build/nginx-module-sts-0.1.1 \
     --add-module=/run/shm/build/nginx-module-stream-sts-0.1.1 \
-    --add-module=/run/shm/build/nchan-1.2.7 \
-    --add-module=/run/shm/build/njs-0.4.0/nginx \
     --add-module=/run/shm/build/headers-more-nginx-module-0.33
 ```
