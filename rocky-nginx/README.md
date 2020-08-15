@@ -5,11 +5,11 @@ It is a custom nginx image.
 
 #### Compile options
 ```bash
-# nginx 1.19.0
+# nginx 1.19.2
 ./configure \
     --with-cpu-opt=generic \
     --with-cc-opt='-O2 -fstack-protector' \
-    --with-ld-opt='-Wl,-Bsymbolic-functions -Wl,-z,relro' \
+    --with-ld-opt='-Wl,-Bsymbolic-functions -Wl,-z,relro -no-pie -static' \
     --prefix=/usr/local \
     --conf-path=/etc/nginx/nginx.conf \
     --modules-path=/usr/lib/nginx/modules \
@@ -50,13 +50,13 @@ It is a custom nginx image.
     --with-stream_ssl_module \
     --with-stream_realip_module \
     --with-stream_ssl_preread_module \
-    --with-openssl=/run/shm/build/openssl-1.1.1g \
-    --with-pcre=/run/shm/build/pcre-8.43 \
-    --with-zlib=/run/shm/build/zlib-1.2.11 \
-    --add-module=/run/shm/build/ngx_brotli \
-    --add-module=/run/shm/build/ngx-fancyindex-0.4.3 \
-    --add-module=/run/shm/build/nginx-module-vts-0.1.18 \
-    --add-module=/run/shm/build/nginx-module-sts-0.1.1 \
-    --add-module=/run/shm/build/nginx-module-stream-sts-0.1.1 \
-    --add-module=/run/shm/build/headers-more-nginx-module-0.33
+    --with-openssl=/tmp/build/openssl-1.1.1g \
+    --with-pcre=/tmp/build/pcre-8.44 \
+    --with-zlib=/tmp/build/zlib-1.2.11 \
+    --add-module=/tmp/build/ngx_brotli \
+    --add-module=/tmp/build/ngx-fancyindex-0.4.4 \
+    --add-module=/tmp/build/nginx-module-vts-0.1.18 \
+    --add-module=/tmp/build/nginx-module-sts-0.1.1 \
+    --add-module=/tmp/build/nginx-module-stream-sts-0.1.1 \
+    --add-module=/tmp/build/headers-more-nginx-module-0.33
 ```
