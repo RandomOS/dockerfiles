@@ -108,7 +108,7 @@ if ! shopt -oq posix; then
 fi
 
 # Aliases
-alias gocache='cd /run/shm'
+alias gocache='cd /dev/shm'
 
 # Prompt
 PS1='\u@\h '      # user@host<space>

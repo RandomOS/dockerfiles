@@ -10,6 +10,6 @@ docker run -it --rm \
     --net container:<container_name> \
     --cap-add sys_admin \
     --cap-add sys_ptrace \
-    -v /run/shm:/run/shm \
+    -v /dev/shm:/dev/shm \
     randomos/troubleshoot bash
 ```
