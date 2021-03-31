@@ -51,7 +51,7 @@ It is a custom tengine image.
     --with-stream_realip_module \
     --with-stream_ssl_preread_module \
     --with-stream_sni \
-    --with-openssl=/tmp/build/openssl-1.1.1g \
+    --with-openssl=/tmp/build/openssl-1.1.1k \
     --with-pcre=/tmp/build/pcre-8.44 \
     --with-zlib=/tmp/build/zlib-1.2.11 \
     --add-module=./modules/ngx_http_concat_module \

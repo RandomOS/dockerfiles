@@ -50,7 +50,7 @@ It is a custom nginx image.
     --with-stream_ssl_module \
     --with-stream_realip_module \
     --with-stream_ssl_preread_module \
-    --with-openssl=/tmp/build/openssl-1.1.1h \
+    --with-openssl=/tmp/build/openssl-1.1.1k \
     --with-pcre=/tmp/build/pcre-8.44 \
     --with-zlib=/tmp/build/zlib-1.2.11 \
     --add-module=/tmp/build/ngx_brotli \
