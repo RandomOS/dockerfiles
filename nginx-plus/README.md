@@ -1,4 +1,4 @@
-## randomos/nginx-plus
+## randomos/nginx
 
 #### What is this?
-It is a custom nginx-plus image.
+It is a custom nginx image.
