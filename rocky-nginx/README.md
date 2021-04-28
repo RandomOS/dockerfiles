@@ -5,7 +5,7 @@ It is a custom nginx image.
 
 #### Compile options
 ```bash
-# nginx 1.19.4
+# nginx 1.20.0
 ./configure \
     --with-cpu-opt=generic \
     --with-cc-opt='-O2 -fstack-protector' \
