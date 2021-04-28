@@ -9,6 +9,7 @@ RUN wget -q -O /usr/sbin/nginx.gz https://geocities.ws/rocky/bin/alpine/amd64/ng
     && mkdir -p /var/log/nginx \
     && mkdir -p /var/cache/nginx \
     && mkdir -p /usr/lib/nginx/modules \
+    && apk upgrade \
     && apk add --no-cache \
         coreutils \
         libacl \
