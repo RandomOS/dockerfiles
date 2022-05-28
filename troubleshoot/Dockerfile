@@ -1,4 +1,4 @@
-FROM randomos/alpine-lab:linux-amd64
+FROM randomos/alpine-lab:latest
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 RUN apk update \
@@ -14,7 +14,6 @@ RUN apk update \
         netcat-openbsd ngrep nload nmap nmap-ncat nmap-nping \
         openssl \
         sed socat strace \
-        tcpdump the_silver_searcher \
-        wrk
+        tcpdump the_silver_searcher
 
 CMD ["/bin/bash"]
