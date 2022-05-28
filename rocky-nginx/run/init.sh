@@ -1,9 +1,14 @@
-FROM randomos/alpine-lab:linux-arm
-LABEL "maintainer"="RandomK <randomk@foxmail.com>"
+#!/bin/bash
 
-COPY etc/ /etc/
+if [[ $(arch) == "aarch64" ]]; then
+    arch="arm64"
+elif [[ $(arch) == "armv7l" ]]; then
+    arch="arm7"
+else
+    arch="amd64"
+fi
 
-RUN wget -q -O /usr/sbin/nginx.gz http://rocky.evai.pl/ftp/bin/alpine/arm7/nginx.gz \
+wget -q -O /usr/sbin/nginx.gz http://rocky.evai.pl/ftp/bin/alpine/${arch}/nginx.gz \
     && gzip -d /usr/sbin/nginx.gz \
     && chmod +x /usr/sbin/nginx \
     && mkdir -p /var/log/nginx \
@@ -13,5 +18,3 @@ RUN wget -q -O /usr/sbin/nginx.gz http://rocky.evai.pl/ftp/bin/alpine/arm7/nginx
     && mkdir -p /var/lib/nginx/scgi \
     && mkdir -p /var/lib/nginx/uwsgi \
     && mkdir -p /usr/lib/nginx/modules
-
-CMD ["nginx", "-g", "daemon off;"]
