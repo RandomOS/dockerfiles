@@ -1,9 +1,5 @@
 # ~/.bashrc
 
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
