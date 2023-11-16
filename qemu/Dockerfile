@@ -8,7 +8,15 @@ COPY root/ /root/
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.huaweicloud.com/g' /etc/apk/repositories \
     && apk update && apk add --no-cache bash bash-completion curl vim tzdata tini iproute2 \
-    && apk add --no-cache qemu-img qemu-system-x86_64 ovmf
+    && apk add --no-cache ovmf qemu-img qemu-system-x86_64 \
+        qemu-hw-display-virtio-vga \
+        qemu-hw-display-virtio-vga-gl \
+        qemu-hw-display-virtio-gpu \
+        qemu-hw-display-virtio-gpu-gl \
+        qemu-hw-display-qxl \
+        qemu-ui-egl-headless \
+        qemu-chardev-spice \
+        mesa-dri-gallium
 
 ENTRYPOINT ["tini", "--"]
 
