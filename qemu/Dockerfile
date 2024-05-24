@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.20
 LABEL "maintainer"="gaoyang <qiminggaoyang@yunify.com>"
 
 ENV LANG en_US.UTF-8
