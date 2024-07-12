@@ -7,7 +7,7 @@ ENV TZ=Asia/Shanghai
 COPY root/ /root/
 COPY run/ /tmp/
 
-RUN /tmp/init.sh && rm /tmp/init.sh
+RUN apk update && apk add --no-cache bash && /tmp/init.sh && rm /tmp/init.sh
 
 ENTRYPOINT ["tini", "--"]
 
