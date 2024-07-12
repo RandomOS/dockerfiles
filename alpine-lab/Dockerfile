@@ -1,7 +1,7 @@
 FROM alpine:3.12
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
-ENV TZ Asia/Shanghai
+ENV TZ=Asia/Shanghai
 
 COPY etc/ /etc/
 COPY root/ /root/
