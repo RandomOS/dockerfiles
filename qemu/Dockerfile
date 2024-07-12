@@ -1,8 +1,8 @@
 FROM alpine:3.20
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
-ENV LANG en_US.UTF-8
-ENV TZ Asia/Shanghai
+ENV LANG=en_US.UTF-8
+ENV TZ=Asia/Shanghai
 
 COPY root/ /root/
 COPY run/ /tmp/
