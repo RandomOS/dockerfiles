@@ -9,7 +9,12 @@ apk add --no-cache qemu-img qemu-system-${arch} \
     qemu-hw-display-virtio-vga-gl \
     qemu-hw-display-virtio-gpu \
     qemu-hw-display-virtio-gpu-gl \
+    qemu-hw-display-virtio-gpu-pci \
+    qemu-hw-display-virtio-gpu-pci-gl \
     qemu-hw-display-qxl \
+    qemu-hw-usb-host \
+    qemu-hw-usb-redirect \
+    qemu-ui-curses \
     qemu-ui-egl-headless \
     qemu-chardev-spice \
     mesa-dri-gallium
