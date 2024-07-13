@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.20
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV TZ=Asia/Shanghai
@@ -6,8 +6,8 @@ ENV TZ=Asia/Shanghai
 COPY etc/ /etc/
 COPY root/ /root/
 
-RUN echo 'https://mirrors.aliyun.com/alpine/v3.12/main' > /etc/apk/repositories \
-    && echo 'https://mirrors.aliyun.com/alpine/v3.12/community' >> /etc/apk/repositories \
-    && apk update && apk add --no-cache bash bash-completion curl vim tzdata
+RUN apk update && apk add --no-cache bash bash-completion curl vim tzdata \
+    && cp /etc/apk/repositories /etc/apk/repositories.orig \
+    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.huaweicloud.com/g' /etc/apk/repositories
 
-CMD ["/bin/sh"]
+CMD ["tail", "-f", "/dev/null"]
