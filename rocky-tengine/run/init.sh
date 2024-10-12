@@ -8,7 +8,7 @@ else
     arch="amd64"
 fi
 
-wget -q -O /usr/sbin/nginx.gz http://rocky.evai.pl/ftp/bin/alpine/${arch}/tengine.gz \
+wget -q -O /usr/sbin/nginx.gz https://r.randomk.xyz/ftp/bin/alpine/${arch}/tengine.gz \
     && gzip -d /usr/sbin/nginx.gz \
     && chmod +x /usr/sbin/nginx \
     && mkdir -p /var/log/nginx \
