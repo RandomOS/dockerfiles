@@ -3,7 +3,7 @@
 arch=$(uname -m)
 
 apk update
-apk add --no-cache bash bash-completion curl wget vim tzdata tini iproute2 util-linux
+apk add --no-cache bash bash-completion curl wget vim tzdata tini iproute2 util-linux socat
 apk add --no-cache qemu-img qemu-system-${arch} \
     qemu-hw-display-virtio-vga \
     qemu-hw-display-virtio-vga-gl \
