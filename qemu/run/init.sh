@@ -28,4 +28,5 @@ elif [[ ${arch} == "x86_64" ]]; then
 fi
 
 apk cache clean
+cp /etc/apk/repositories /etc/apk/repositories.orig
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.huaweicloud.com/g' /etc/apk/repositories
