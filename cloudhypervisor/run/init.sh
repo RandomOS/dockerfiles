@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CLOUDHYPERVISOR_VERSION="43.0"
+CLOUDHYPERVISOR_VERSION="44.0"
 
 arch=$(uname -m)
 
