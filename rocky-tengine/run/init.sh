@@ -3,7 +3,7 @@
 if [[ $(arch) == "aarch64" ]]; then
     arch="arm64"
 elif [[ $(arch) == "armv7l" ]]; then
-    arch="arm7"
+    arch="armv7"
 else
     arch="amd64"
 fi
