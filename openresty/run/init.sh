@@ -17,3 +17,15 @@ sed -i \
     -e '/snapshot.debian.org/d' /etc/apt/sources.list \
     -e 's/deb.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list \
     -e 's/security.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list
+
+cat << 'EOF' > /etc/openresty/nginx.conf
+user nobody nogroup;
+worker_processes 1;
+pid /var/run/openresty.pid;
+pcre_jit on;
+
+events {
+    worker_connections 1024;
+    multi_accept on;
+}
+EOF
