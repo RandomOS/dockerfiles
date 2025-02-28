@@ -13,9 +13,9 @@ if [[ ! -f /etc/apt/sources.list.orig ]]; then
 fi
 
 sed -i \
-    -e '/openresty.org/d' /etc/apt/sources.list \
-    -e '/snapshot.debian.org/d' /etc/apt/sources.list \
-    -e 's/deb.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list \
+    -e '/openresty.org/d' \
+    -e '/snapshot.debian.org/d' \
+    -e 's/deb.debian.org/mirrors.huaweicloud.com/g' \
     -e 's/security.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list
 
 cat << 'EOF' > /etc/openresty/nginx.conf
