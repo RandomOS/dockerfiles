@@ -17,6 +17,7 @@ apk add --no-cache qemu-img qemu-system-${arch} \
     qemu-ui-curses \
     qemu-ui-egl-headless \
     qemu-chardev-spice \
+    qemu-audio-spice \
     mesa-dri-gallium
 
 if [[ ${arch} == "aarch64" ]]; then
