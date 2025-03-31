@@ -5,4 +5,4 @@ CWD=$(dirname ${SCRIPT})
 
 cd ${CWD}
 
-docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/qemu:3.21 -t randomos/qemu:latest --push .
+docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/qemu:$(date +%Y%m%d) -t randomos/qemu:latest --push .
