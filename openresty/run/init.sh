@@ -12,13 +12,11 @@ if [[ ! -f /etc/apt/sources.list.d/debian.sources.orig ]]; then
     cp /etc/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources.orig
 fi
 
-if [[ ! -f /etc/apt/sources.list.d/openresty.list.orig ]]; then
-    mv /etc/apt/sources.list.d/openresty.list /etc/apt/sources.list.d/openresty.list.orig
-fi
-
 sed -i \
     -e '/snapshot.debian.org/d' \
     -e 's/deb.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list.d/debian.sources
+
+sed -i 's/^deb/#deb/' /etc/apt/sources.list.d/openresty.list
 
 cat << 'EOF' > /etc/openresty/nginx.conf
 user nobody nogroup;
