@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.27.1.1-buster-fat
+FROM openresty/openresty:1.27.1.2-bookworm-fat
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV LANG=en_US.UTF-8
