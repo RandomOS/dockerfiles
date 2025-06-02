@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.22
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV TZ=Asia/Shanghai
