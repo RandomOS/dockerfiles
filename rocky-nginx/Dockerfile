@@ -1,4 +1,4 @@
-FROM randomos/alpine-lab:3.21
+FROM randomos/alpine-lab:3.22
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 COPY etc/ /etc/
