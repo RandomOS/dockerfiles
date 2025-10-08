@@ -5,4 +5,4 @@ CWD=$(dirname ${SCRIPT})
 
 cd ${CWD}
 
-docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/rocky-nginx:1.29.0 -t randomos/rocky-nginx:latest --push .
+docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/rocky-nginx:1.29.2 -t randomos/rocky-nginx:latest --push .
