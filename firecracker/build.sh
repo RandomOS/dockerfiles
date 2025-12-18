@@ -5,4 +5,4 @@ CWD=$(dirname ${SCRIPT})
 
 cd ${CWD}
 
-docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/firecracker:1.13.0 -t randomos/firecracker:latest --push .
+docker buildx build -f Dockerfile --platform linux/amd64,linux/arm64 -t randomos/firecracker:1.14.0 -t randomos/firecracker:latest --push .

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FIRECRACKER_VERSION="1.13.0"
+FIRECRACKER_VERSION="1.14.0"
 
 arch=$(uname -m)
 
