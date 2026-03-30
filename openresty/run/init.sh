@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y bash bash-completion curl wget vim locales tzdata iproute2 less procps netcat-openbsd \
