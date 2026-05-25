@@ -16,7 +16,7 @@ sed -i \
     -e 's/archive.ubuntu.com/mirrors.huaweicloud.com/g' \
     -e 's/security.ubuntu.com/mirrors.huaweicloud.com/g' /etc/apt/sources.list
 
-cat <<'EOF' >/etc/openresty/nginx.conf
+cat <<'EOF' >/usr/local/openresty/nginx/conf/nginx.conf
 user nobody nogroup;
 worker_processes 1;
 pid /var/run/openresty.pid;
