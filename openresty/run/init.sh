@@ -8,15 +8,13 @@ apt-get update \
     && ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata
 
-if [[ ! -f /etc/apt/sources.list.d/debian.sources.orig ]]; then
-    cp /etc/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources.orig
+if [[ ! -f /etc/apt/sources.list.orig ]]; then
+    cp /etc/apt/sources.list /etc/apt/sources.list.orig
 fi
 
 sed -i \
-    -e '/snapshot.debian.org/d' \
-    -e 's/deb.debian.org/mirrors.huaweicloud.com/g' /etc/apt/sources.list.d/debian.sources
-
-sed -i 's/^deb/#deb/' /etc/apt/sources.list.d/openresty.list
+    -e 's/archive.ubuntu.com/mirrors.huaweicloud.com/g' \
+    -e 's/security.ubuntu.com/mirrors.huaweicloud.com/g' /etc/apt/sources.list
 
 cat <<'EOF' >/etc/openresty/nginx.conf
 user nobody nogroup;
