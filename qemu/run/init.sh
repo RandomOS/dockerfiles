@@ -18,7 +18,8 @@ apk add --no-cache qemu-img qemu-system-${arch} \
     qemu-ui-egl-headless \
     qemu-chardev-spice \
     qemu-audio-spice \
-    mesa-dri-gallium
+    mesa-dri-gallium \
+    virtiofsd
 
 if [[ ${arch} == "aarch64" ]]; then
     apk add --no-cache aavmf
