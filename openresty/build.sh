@@ -5,4 +5,4 @@ CWD=$(dirname ${SCRIPT})
 
 cd ${CWD}
 
-docker buildx build -f Dockerfile --platform linux/amd64 -t randomos/openresty:1.29.2.5 -t randomos/openresty:latest --push .
+docker buildx build -f Dockerfile --platform linux/amd64 -t randomos/openresty:1.31.1.1 -t randomos/openresty:latest --push .
