@@ -1,4 +1,4 @@
-FROM randomos/alpine-lab:3.23
+FROM randomos/alpine-lab:3.24
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 RUN apk update \
