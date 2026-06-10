@@ -1,4 +1,4 @@
-FROM alpine:3.23
+FROM alpine:3.24
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV LANG=en_US.UTF-8
