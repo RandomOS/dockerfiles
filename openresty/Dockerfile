@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.31.1.1-jammy
+FROM openresty/openresty:1.31.8.1-jammy
 LABEL "maintainer"="RandomK <randomk@foxmail.com>"
 
 ENV LANG=en_US.UTF-8
